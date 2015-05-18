@@ -1,7 +1,9 @@
 /* Exercício 1: Criar uma transição para quando o mouse estiver em cima dos
  * botões play/stop (para que o elemento se revele lentamente)
  */
- #controles ul {}
+ #controles ul {
+	transition-duration: 2s;
+ }
 
 /*
  * Exercício 2: Você deve implementar uma metáfora visual para cada um dos 4
@@ -11,17 +13,34 @@
  *   - perturbado: animal fica pulsando
  *   - instinto-selvagem: animal dá um salto e cresce, com uma borda vermelha
  */
-.agitado {}
-.agitado img {}
+.agitado {
+  position: relative;
+  -webkit-animation: flutuando .5s ease-in-out 0s infinite alternate;
+}
+@keyframes flutuando {
+  from { top: 0;     }
+  to   { top: -30px; }
+}
 
-.alimentado {}
-.alimentado img {}
+.agitado img {
+  position: relative;
+  -webkit-animation: flutuando .5s ease-in-out 0s infinite alternate;
+  }
+
+.alimentado {
+}
+.alimentado img {
+ transform: scale(1.1);
+}
 
 .perturbado {}
 .perturbado img {}
 
 .instinto-selvagem {}
-.instinto-selvagem img {}
+.instinto-selvagem img {
+	border-color: red;
+	border-width: 5px;
+}
 
 /*
  * Exercício 3: Criar uma imagem sprite com as imagens dos botões de controle
@@ -34,6 +53,16 @@
 .comecar,
 .parar {}
 
-.comecar {}
+.comecar {
+  width: 24px;
+  height: 29px;
+  background-image: url('imgs/sprite-controles.png');
+  background-position: 0px 0;
+}
 
-.parar {}
+.parar {
+  width: 24px;
+  height: 29px;
+  background-image: url('imgs/sprite-controles.png');
+  background-position: 0px 29px;
+}
