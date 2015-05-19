@@ -14,32 +14,51 @@
  *   - instinto-selvagem: animal dá um salto e cresce, com uma borda vermelha
  */
 .agitado {
-  position: relative;
-  -webkit-animation: flutuando .5s ease-in-out 0s infinite alternate;
-}
-@keyframes flutuando {
-  from { top: 0;     }
-  to   { top: -30px; }
 }
 
 .agitado img {
-  position: relative;
-  -webkit-animation: flutuando .5s ease-in-out 0s infinite alternate;
-  }
+  -webkit-animation: piscando .5s ease-in-out 0s infinite alternate;
+}
 
 .alimentado {
 }
 .alimentado img {
- transform: scale(1.1);
+	border-color: green;
+	border-width: 5px;
+	-webkit-animation: girando .5s ease-in-out 0s infinite alternate;
 }
 
 .perturbado {}
-.perturbado img {}
+.perturbado img {
+	position: relative;
+	-webkit-animation: tremendo .1s 0s infinite alternate;
+}
 
 .instinto-selvagem {}
 .instinto-selvagem img {
 	border-color: red;
 	border-width: 5px;
+	-webkit-animation: pulsando 1s ease-in-out 0s 1 alternate;
+}
+
+@-webkit-keyframes piscando {
+  from { opacity: 1;     }
+  to   { opacity: .5; }
+}
+
+@-webkit-keyframes girando {
+  from { transform: rotate(-10deg);}
+  to   { transform: rotate(10deg); }
+}
+
+@-webkit-keyframes tremendo {
+  from { left: -10px;}
+  to   { left: 10px; }
+}
+
+@-webkit-keyframes pulsando {
+  from { transform: scale(0.9);}
+  to   { transform: scale(1.1); }
 }
 
 /*
