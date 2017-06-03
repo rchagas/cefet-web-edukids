@@ -17,7 +17,7 @@
 }
 
 .agitado img {
-  -webkit-animation: piscando .5s ease-in-out 0s infinite alternate;
+  animation: piscando .5s ease-in-out 0s infinite alternate;
 }
 
 .alimentado {
@@ -25,38 +25,38 @@
 .alimentado img {
 	border-color: green;
 	border-width: 5px;
-	-webkit-animation: girando .5s ease-in-out 0s infinite alternate;
+	animation: girando .5s ease-in-out 0s infinite alternate;
 }
 
 .perturbado {}
 .perturbado img {
 	position: relative;
-	-webkit-animation: tremendo .1s 0s infinite alternate;
+	animation: tremendo .1s 0s infinite alternate;
 }
 
 .instinto-selvagem {}
 .instinto-selvagem img {
 	border-color: red;
 	border-width: 5px;
-	-webkit-animation: pulsando 1s ease-in-out 0s 1 alternate;
+	animation: pulsando 1s ease-in-out 0s 1 alternate;
 }
 
-@-webkit-keyframes piscando {
+@keyframes piscando {
   from { opacity: 1;     }
   to   { opacity: .5; }
 }
 
-@-webkit-keyframes girando {
+@keyframes girando {
   from { transform: rotate(-10deg);}
   to   { transform: rotate(10deg); }
 }
 
-@-webkit-keyframes tremendo {
+@keyframes tremendo {
   from { left: -10px;}
   to   { left: 10px; }
 }
 
-@-webkit-keyframes pulsando {
+@keyframes pulsando {
   from { transform: scale(0.9);}
   to   { transform: scale(1.1); }
 }
